@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag.measures
+namespace com.github.lhervier.ksp.diag.scatter.measures
 {
     /// <summary>
     /// Where an object holding a set of rocks stands, and where Unity draws it, against its quad.

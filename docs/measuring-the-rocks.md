@@ -77,7 +77,7 @@ pictures say what it means for whoever plays.
 
 ## The log
 
-Every record is written on lines starting with `[RockPrecisionFixDiag]`, every height in metres, from
+Every record is written on lines starting with `[Diag-Scatter]`, every height in metres, from
 the centre of the body, to the micrometre: subtracting two of them gives millimetres. A record reads:
 
 ```

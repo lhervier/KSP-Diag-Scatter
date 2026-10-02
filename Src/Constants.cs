@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag
+namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
     /// The key that records a reading, and the fixed values the survey of the rocks relies on.
@@ -8,7 +8,7 @@ namespace com.github.lhervier.ksp.rockprecisionfixdiag
     internal static class Constants
     {
         /// <summary>Tag in front of every line this mod writes to KSP.log.</summary>
-        public const string LOG_PREFIX = "[RockPrecisionFixDiag] ";
+        public const string LOG_PREFIX = "[KSPDiagScatter] ";
 
         /// <summary>
         /// Key that records a reading, pressed along with the modifier key of the game (Alt): alone for the

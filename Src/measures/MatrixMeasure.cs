@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag.measures
+namespace com.github.lhervier.ksp.diag.scatter.measures
 {
     /// <summary>
     /// Where Unity draws an object, from the translation of its local to world matrix, against the transform

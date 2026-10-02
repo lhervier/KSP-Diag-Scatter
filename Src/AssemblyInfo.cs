@@ -1,6 +1,6 @@
 using System.Reflection;
 
-[assembly: AssemblyTitle("RockPrecisionFixDiagMod")]
+[assembly: AssemblyTitle("KSPDiagScatter")]
 [assembly: AssemblyDescription("Measures where the terrain scatter (rocks, grass, trees) is drawn against the ground, one line per scene loading")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]

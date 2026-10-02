@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag.measures
+namespace com.github.lhervier.ksp.diag.scatter.measures
 {
     /// <summary>
     /// Where one vertex of a rock stands against the ground, as it is drawn. Heights are distances from the

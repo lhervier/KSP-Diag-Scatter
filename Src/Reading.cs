@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-using com.github.lhervier.ksp.rockprecisionfixdiag.measures;
+using com.github.lhervier.ksp.diag.scatter.measures;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag
+namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
     /// One reading, at one moment: every quad carrying rocks around the craft with its holders, and the rocks

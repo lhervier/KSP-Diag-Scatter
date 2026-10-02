@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag
+namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
     /// Terrain scatter recorder. Each press of a key takes a reading and writes it to KSP.log in full: Mod+F6
@@ -9,7 +9,7 @@ namespace com.github.lhervier.ksp.rockprecisionfixdiag
     /// scene, so that the pools can be read after leaving a body as well.
     /// </summary>
     [KSPAddon(KSPAddon.Startup.AllGameScenes, false)]
-    public class RockPrecisionFixDiagMod : MonoBehaviour
+    public class KSPDiagScatter : MonoBehaviour
     {
         private static readonly KeyBinding RECORD = new KeyBinding(Constants.RECORD_KEY);
         private static readonly KeyBinding LEFT_SHIFT = new KeyBinding(KeyCode.LeftShift);

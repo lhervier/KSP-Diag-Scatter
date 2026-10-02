@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag
+namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
     /// Turns world positions into heights: distances from the centre of a body, in metres.

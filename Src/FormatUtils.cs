@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag
+namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
     /// Turns what has been measured into what the log shows. Invariant culture throughout, so that two

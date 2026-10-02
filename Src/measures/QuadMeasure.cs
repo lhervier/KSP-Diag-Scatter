@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag.measures
+namespace com.github.lhervier.ksp.diag.scatter.measures
 {
     /// <summary>
     /// Where a terrain quad carrying rocks stands, where Unity draws it, and the same for each of

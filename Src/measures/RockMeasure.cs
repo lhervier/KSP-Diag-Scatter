@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag.measures
+namespace com.github.lhervier.ksp.diag.scatter.measures
 {
     /// <summary>
     /// Where one rock stands against the ground, as it is drawn, at a few of its vertices spread over

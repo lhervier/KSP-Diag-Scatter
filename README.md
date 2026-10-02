@@ -1,4 +1,4 @@
-# Rock Precision Fix Diag
+# KSP Diag - Scatter
 
 **⚠️ Work in progress.** This is an active investigation, not a finished mod. The figures, the code and the conclusions on this page can still change, and several questions are still open.
 
@@ -78,13 +78,13 @@ load.
 
 ## Get it
 
-Source: <https://github.com/lhervier/KSP-RockPrecisionFixDiag>
+Source: <https://github.com/lhervier/KSP-Diag-Scatter>
 
 **Build.** It needs the .NET SDK and reads the KSP assemblies from your install. Set `KSPDIR` to your
-KSP install folder and run `build.bat`. It compiles `GameData/RockPrecisionFixDiagMod/RockPrecisionFixDiagMod.dll`
+KSP install folder and run `build.bat`. It compiles `GameData/KSPDiagScatter/KSPDiagScatter.dll`
 and never touches your KSP install.
 
-**Install.** Copy `GameData/RockPrecisionFixDiagMod` into the `GameData` of KSP. It runs on a stock
+**Install.** Copy `GameData/KSPDiagScatter` into the `GameData` of KSP. It runs on a stock
 install, and needs neither Harmony nor any other mod: it only reads the scene.
 
 ## License

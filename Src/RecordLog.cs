@@ -2,7 +2,7 @@ using System.Globalization;
 using System.Text;
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag
+namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
     /// The text of one record, built line by line by the measures, then written to KSP.log as a single

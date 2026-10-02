@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using com.github.lhervier.ksp.rockprecisionfixdiag.measures;
+using com.github.lhervier.ksp.diag.scatter.measures;
 using UnityEngine;
 
-namespace com.github.lhervier.ksp.rockprecisionfixdiag
+namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
     /// The survey of the holders of rocks (Mod+Shift+F6): every pool of holders of the scene, and every holder
