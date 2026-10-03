@@ -10,7 +10,7 @@ of these readings should come out the same every time. Every position is read as
 from the centre of the body, in double precision, from the exact position of that centre that KSP keeps
 (`CelestialBody.position`).
 
-Reading 6 is of another kind: taken in any scene, on a key of its own, it measures no height and checks
+Reading 6 is of another kind: taken in any scene, on a button of its own, it measures no height and checks
 the pools the holders come from, during a flight or across scene switches.
 
 Reading 7 compares nothing between loads. Within one reading, it compares where an object is drawn with

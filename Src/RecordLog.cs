@@ -12,6 +12,9 @@ namespace com.github.lhervier.ksp.diag.scatter
     {
         private readonly StringBuilder text = new StringBuilder();
 
+        /// <summary>The last line added, without the tag and the indentation.</summary>
+        public string LastLine { get; private set; }
+
         /// <summary>
         /// Adds a line, indented by the given depth, formatted in the invariant culture so that two players
         /// comparing their logs read the same digits whatever their machine is set to.
@@ -22,9 +25,10 @@ namespace com.github.lhervier.ksp.diag.scatter
             {
                 text.AppendLine();
             }
+            LastLine = string.Format(CultureInfo.InvariantCulture, format, args);
             text.Append(Constants.LOG_PREFIX)
                 .Append(' ', 2 * depth)
-                .AppendFormat(CultureInfo.InvariantCulture, format, args);
+                .Append(LastLine);
         }
 
         /// <summary>Writes every line added so far to KSP.log.</summary>

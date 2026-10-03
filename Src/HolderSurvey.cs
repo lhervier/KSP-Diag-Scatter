@@ -5,22 +5,26 @@ using UnityEngine;
 namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
-    /// The survey of the holders of rocks (Mod+Shift+F6): every pool of holders of the scene, and every holder
-    /// that belongs to none, under a record number that keeps counting across scene changes.
+    /// The survey of the holders of rocks (the button Record the holder pools): every pool of holders of the
+    /// scene, and every holder that belongs to none, under a record number that keeps counting across scene
+    /// changes.
     /// </summary>
     internal static class HolderSurvey
     {
         // Static: a reload destroys the addon, and the numbers must go on from one load to the next.
         private static int recordCount;
 
-        /// <summary>Takes a reading of the holders and writes it to KSP.log under the next record number.</summary>
-        public static void Record()
+        /// <summary>
+        /// Takes a reading of the holders and writes it to KSP.log under the next record number. Returns the last
+        /// line written.
+        /// </summary>
+        public static string Record()
         {
             if (!PoolMeasure.Readable)
             {
-                Debug.LogError(Constants.LOG_PREFIX + "The scatter pools of this version of KSP cannot be read:"
-                    + " nothing recorded.");
-                return;
+                const string UNREADABLE = "The scatter pools of this version of KSP cannot be read: nothing recorded.";
+                Debug.LogError(Constants.LOG_PREFIX + UNREADABLE);
+                return UNREADABLE;
             }
             recordCount++;
             int number = recordCount;
@@ -78,6 +82,7 @@ namespace com.github.lhervier.ksp.diag.scatter
             log.Line(0, "End of holder record {0}: {1} pools, {2} holders in use, {3} free, {4} in no pool;"
                 + " {5} broken rules", number, pools.Count, inUse, free, strays.Count, irregular);
             log.Write();
+            return log.LastLine;
         }
     }
 }

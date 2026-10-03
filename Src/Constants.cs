@@ -3,7 +3,7 @@ using UnityEngine;
 namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
-    /// The key that records a reading, and the fixed values the survey of the rocks relies on.
+    /// The key and the window, and the fixed values the survey of the rocks relies on.
     /// </summary>
     internal static class Constants
     {
@@ -11,10 +11,18 @@ namespace com.github.lhervier.ksp.diag.scatter
         public const string LOG_PREFIX = "[KSPDiagScatter] ";
 
         /// <summary>
-        /// Key that records a reading, pressed along with the modifier key of the game (Alt): alone for the
-        /// rocks, with Shift as well for the holders. Stock only uses it in the action group editor.
+        /// Key that shows or hides the window, pressed along with the modifier key of the game (Alt): the same
+        /// for every KSP Diag. Stock only uses it in the action group editor.
         /// </summary>
-        public const KeyCode RECORD_KEY = KeyCode.F6;
+        public const KeyCode WINDOW_KEY = KeyCode.F6;
+
+        /// <summary>Id of the window, unique among the windows of the game.</summary>
+        public const int WINDOW_ID = 0x47485006;
+
+        /// <summary>Where the window opens, and how wide it is, in pixels.</summary>
+        public const float WINDOW_X = 60f;
+        public const float WINDOW_Y = 60f;
+        public const float WINDOW_WIDTH = 420f;
 
         /// <summary>
         /// How far above a vertex of a rock the ray looking for the ground starts, in metres. The

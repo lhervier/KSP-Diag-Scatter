@@ -90,9 +90,10 @@ namespace com.github.lhervier.ksp.diag.scatter
 
         /// <summary>
         /// Writes the reading to KSP.log, under the given record number: an opening line, every quad with its
-        /// holders, the rocks of the nearest quad, then a closing line counting what was written.
+        /// holders, the rocks of the nearest quad, then a closing line counting what was written. Returns that
+        /// closing line.
         /// </summary>
-        public void Log(int number)
+        public string Log(int number)
         {
             RecordLog log = new RecordLog();
             log.Line(0, "Record {0} on {1}: scatter {2}. Heights are distances from the centre of {1}, in metres",
@@ -162,6 +163,7 @@ namespace com.github.lhervier.ksp.diag.scatter
                 }
             }
             log.Write();
+            return log.LastLine;
         }
     }
 }

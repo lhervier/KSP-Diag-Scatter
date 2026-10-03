@@ -11,12 +11,12 @@ and handed back to, over a flight and across scene switches.
    Mk1 command pod in a circular equatorial orbit 5 km over the Mun. Flying that low, the terrain keeps
    building the quads ahead of the pod and destroying those behind it, sending their holders through the
    pool all the way. Some of the Mun's relief rises above the orbit, so the pod crashes after a while.
-3. **Press `Alt+Shift+F6`** (`Mod+Shift+F6`) 30 s into the flight, then again about every two minutes,
-   and once more after the crash. The moments do not need to be exact: each record is a check of its own,
+3. **Press *Record the holder pools*** in the mod's window 30 s into the flight, then again about every two
+   minutes, and once more after the crash. The moments do not need to be exact: each record is a check of its own,
    not a number to compare with another flight.
 4. **Copy `KSP.log`** before relaunching KSP.
 
-The key works in every scene, not only in flight.
+The button works in every scene, not only in flight. `Alt+F6` (`Mod+F6`) shows or hides the window.
 
 ## Across scene switches
 
@@ -26,10 +26,10 @@ left hanging from a quad of the Mun would show up on another body, in no pool.
 
 1. **Scatter on, and the log written at once**, as above.
 2. **Load [`reference-mune.sfs`](../diag/reference-mune.sfs)** from the Space Center, copied into the
-   folder of a sandbox game, and press `Alt+Shift+F6` once the terrain has settled.
-3. **Go back to the Space Center**, and press `Alt+Shift+F6` there.
+   folder of a sandbox game, and press *Record the holder pools* once the terrain has settled.
+3. **Go back to the Space Center**, and press *Record the holder pools* there.
 4. **Load [`reference-kerbin.sfs`](../diag/reference-kerbin.sfs)**, copied into the same folder, and press
-   `Alt+Shift+F6` once the terrain has settled.
+   *Record the holder pools* once the terrain has settled.
 5. **Copy `KSP.log`** before relaunching KSP.
 
 Expected: the Mun's pool in the first record only, Kerbin's from the second on, and `0 broken rules` in

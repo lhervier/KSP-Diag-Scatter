@@ -15,13 +15,14 @@ objects of scatter against the ground, load after load, or along a flight.
    `Alt+F12 → Cheats → Set Position`, either on another body or, with *Use middle click to set position*
    ticked, by middle-clicking a spot on the ground.
 4. **Save.**
-5. **Load that save and press `Alt+F6`** (`Mod+F6`: the modifier key of the game). The reading is
+5. **Load that save and press *Record the rocks*** in the mod's window (`Alt+F6`, `Mod+F6` with the
+   modifier key of the game, shows or hides it). The reading is
    written to `KSP.log`, and its last line tells what it holds: how many quads carry scatter, how many
    holders are not built yet, and how many objects and vertices were measured on the nearest quad. Quads and
    their scatter are built over several frames after loading: if holders are not built yet, or the
    counts still grow from one press to the next, wait a few seconds and press again.
    Only the last record of each load is needed.
-6. **Load the same save again, and press `Alt+F6` again.** A dozen times: how far things move changes
+6. **Load the same save again, and press *Record the rocks* again.** A dozen times: how far things move changes
    from one load to the next, and a handful of loads can come out small or large by chance.
 
 KSP overwrites `KSP.log` each time it starts: copy it before relaunching. Reloading the save from within
@@ -38,7 +39,7 @@ come through that.
 2. **Load [`ref-mune-5km.sfs`](../diag/ref-mune-5km.sfs)**, copied into the folder of a sandbox game: a
    Mk1 command pod in a circular equatorial orbit 5 km over the Mun. Some of the Mun's relief rises above
    the orbit, so the pod crashes after a while.
-3. **Press `Alt+F6`** 30 s into the flight, then again every two minutes, and once more after the crash.
+3. **Press *Record the rocks*** 30 s into the flight, then again every two minutes, and once more after the crash.
 4. **Copy `KSP.log`** before relaunching KSP.
 
 Each record reads on its own: the heights of every quad and of its holders, as after a load. To compare
@@ -64,12 +65,12 @@ file says KSP 1.8 to 1.11, but it holds no code, and it works on 1.12.5.
    deserts. Walk the kerbal up the rock with the jetpack, and save there. The kerbal is what makes the gap
    visible: it stands on the collider, so it sinks into the rock one sees, or floats above it. The
    reading itself does not need it.
-4. **Load that save and press `Alt+F6`.** The closing line of the record ends on how many colliders were
+4. **Load that save and press *Record the rocks*.** The closing line of the record ends on how many colliders were
    measured: 0 means nothing gave the scatter around the craft a collider, and there is nothing to read.
 5. **Take a picture of the kerbal's feet** at each load, from as near the same viewpoint as you can. A
    kerbal always sinks a little into whatever it stands on, so one picture proves nothing: what shows is
    how much it changes from one load to the next.
-6. **Load the same save again, press `Alt+F6` and take the picture again.** Half a dozen times: how far a
+6. **Load the same save again, press *Record the rocks* and take the picture again.** Half a dozen times: how far a
    collider stands from the object it belongs to is drawn afresh at every load.
 
 Every record holds one line per object with a collider, so the series can be read on the logs alone. The

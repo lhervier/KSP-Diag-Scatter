@@ -49,17 +49,18 @@ physics engine holds its collider.
 ## Measuring the rocks
 
 Readings 1 to 5: scatter on and the log written at once, a craft landed and saved, then that save loaded a
-dozen times, with `Alt+F6` pressed after each load; or the same key pressed along a flight 5 km over the
-Mun. Each record ends on a line counting what it holds. Reading 7 needs a mod that gives the scatter
-colliders, and reads better with a kerbal left standing on a rock: it sinks into the rock or stands clear
-of it by a different amount at every load.
+dozen times, with *Record the rocks* pressed after each load; or the same button pressed along a flight 5 km
+over the Mun. The buttons are in the mod's window, which `Alt+F6` shows or hides. Each record ends on a line
+counting what it holds. Reading 7 needs a mod that gives the scatter colliders, and reads better with a
+kerbal left standing on a rock: it sinks into the rock or stands clear of it by a different amount at every
+load.
 
 **→ Full chapter: [Measuring the rocks](docs/measuring-the-rocks.md)**
 
 ## Checking the holder pools
 
-Reading 6: `Alt+Shift+F6` pressed along a flight 5 km over the Mun and after the crash, or on the Mun, at
-the Space Center and on Kerbin in turn, with the provided saves. Each record ends on the number of rules
+Reading 6: *Record the holder pools* pressed along a flight 5 km over the Mun and after the crash, or on the
+Mun, at the Space Center and on Kerbin in turn, with the provided saves. Each record ends on the number of rules
 the pools break: 0 expected.
 
 **→ Full chapter: [Checking the holder pools](docs/checking-the-holder-pools.md)**
