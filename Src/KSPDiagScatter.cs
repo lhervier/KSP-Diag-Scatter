@@ -16,6 +16,14 @@ namespace com.github.lhervier.ksp.diag.scatter
 
         // Static: the window keeps its place and its visibility from one scene to the next.
         private static bool visible = true;
+
+        /// <summary>Whether the window shows, as Mod+F6 toggles it; the measures go on either way.</summary>
+        internal static bool WindowVisible
+        {
+            get { return visible; }
+            set { visible = value; }
+        }
+
         private static Rect windowRect = new Rect(Constants.WINDOW_X, Constants.WINDOW_Y, Constants.WINDOW_WIDTH, 0f);
 
         // The closing line of the last record, shown under the buttons.
@@ -77,5 +85,6 @@ namespace com.github.lhervier.ksp.diag.scatter
             get { return windowRect; }
             set { windowRect = value; }
         }
+
     }
 }

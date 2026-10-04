@@ -46,6 +46,15 @@ namespace com.github.lhervier.ksp.diag.scatter
             };
         }
 
+        [McpTool("scatter_show_window",
+            "Shows or hides the window of KSP Diag - Scatter, as Mod+F6 does; what it measures goes on either " +
+            "way. Returns whether it shows (visible).")]
+        internal static object ShowWindow(bool visible)
+        {
+            KSPDiagScatter.WindowVisible = visible;
+            return new Dictionary<string, object> { { "visible", KSPDiagScatter.WindowVisible } };
+        }
+
         private static KSPDiagScatter Window()
         {
             KSPDiagScatter window = Object.FindObjectOfType<KSPDiagScatter>();
