@@ -19,7 +19,7 @@ it from that game.
 - [`reference-mune.sfs`](reference-mune.sfs): a single Mk1 command pod landed on the Mun (latitude
   −12.4124°, longitude 91.7314°), where the scatter is rocks.
 - [`ref-mune-5km.sfs`](ref-mune-5km.sfs): a single Mk1 command pod in a circular equatorial orbit 5 km over
-  the Mun, the same save as [PQSBench's](https://github.com/lhervier/KSP-PQSBench/blob/master/README.md#the-save).
+  the Mun, the same save as [PQSBench's](https://github.com/lhervier/KSP-PQSBench/blob/main/README.md#the-save).
   Some of the Mun's relief rises above that orbit, so the pod crashes into it after a while.
 - [`ref-kerbin-scatter-collider-eva.sfs`](ref-kerbin-scatter-collider-eva.sfs): a Mk1 command pod landed in
   a desert of Kerbin (latitude −5.6080°, longitude −143.5447°), with Jebediah out on EVA, standing on a
