@@ -109,8 +109,8 @@ each with a collider, so they compare one by one from one load to the next and f
 other. The records of the series with Terrain Precision Fix are numbered 6 to 11: its session had already
 served for loads that were not kept.
 
-A third series, with Rock Precision Fix installed as well, belongs to
-[that mod's repository](https://github.com/lhervier/KSP-RockPrecisionFix/blob/main/diag/README.md).
+A third series, with the scatter fix of Terrain Precision Fix on as well, belongs to
+[that mod's repository](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/diag/README.md#the-scatter-fix).
 
 ## The rocks, over a flight
 
