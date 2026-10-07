@@ -154,7 +154,7 @@ collider, so an object drawn a few centimetres off changes nothing for a craft. 
 scatter, it does: the rock a craft hits is not the rock its pilot sees, by several centimetres, drawn
 afresh at every load. The terrain fix of Terrain Precision Fix does not settle it. What its scatter fix makes of it, and the
 third series, with both fixes on, are on
-[its own page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/limits-and-solutions/stock/the-scatter-fix/checking-the-culprit.md).
+[its own page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/non-regression/kopernicus/scatter-with-colliders.md).
 
 ## The holder pools
 

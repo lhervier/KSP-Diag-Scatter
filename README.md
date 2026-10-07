@@ -32,7 +32,7 @@ changes the height at which KSP builds the ground, and checking a change like th
 everything placed against that ground. Scatter is one of those things, so this instrument is meant to be
 run on stock and with Terrain Precision Fix installed. The readings taken both ways, on the same saves, are
 kept under [diag](diag/README.md) and summed up under [What the readings show](#what-the-readings-show). Why stock draws scatter off the ground is on
-[Terrain Precision Fix's page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/limits-and-solutions/stock/the-scatter-fix/the-culprit.md).
+[Terrain Precision Fix's page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/the-culprit-scatter.md).
 This page sticks to how to measure it.
 
 ## What it measures
