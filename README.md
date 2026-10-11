@@ -15,9 +15,6 @@ install, whether they come back at the same height every time. It also checks th
 taken from, and, where a mod has given the scatter colliders, whether the rock a craft hits is the rock
 it can see.
 
-Why that matters, and what was found with it, is told by
-[Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix#the-scatter-off-by-default).
-
 ## What it measures
 
 At each load of a save, for every quad carrying scatter around the craft, the heights of the quad and of
@@ -48,17 +45,6 @@ collider.
 the number of rules the pools break, 0 expected. Reading 7 needs a mod that gives the scatter colliders,
 and its closing line counts the colliders measured: 0 means there is nothing to read. KSP overwrites
 `KSP.log` each time it starts: copy it before relaunching.
-
-## Measured campaigns
-
-This instrument reads the scatter in the campaigns of
-[Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix), each played on stock and
-with that mod, with its protocol, its saves and its logs:
-[loading the same save](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/checking-the-culprit-loading/the-scatter.md),
-[along a flight](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/checking-the-culprit-flight/the-scatter.md),
-[the holder pools](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/non-regression/stock/the-scatter-holders.md)
-and [the scatter with colliders](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/non-regression/kopernicus/scatter-with-colliders.md).
-The figures read with it are on those pages.
 
 ## Get it
 
