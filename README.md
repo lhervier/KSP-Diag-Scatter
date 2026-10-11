@@ -9,21 +9,16 @@ nothing, so what there is to check is the reading itself: the source is public, 
 takes is described in [What it measures](docs/what-it-measures.md).
 
 A measuring instrument for KSP 1.12, for the terrain scatter drawn around your craft — the rocks, and
-around the KSC the grass and the trees. It reads, at each load of a save, where the quads, the holders
-of their scatter and the objects themselves are drawn against the ground, and lets you check, on your own
-install, whether they come back at the same height every time. It also checks the pools the holders are
-taken from, and, where a mod has given the scatter colliders, whether the rock a craft hits is the rock
-it can see.
+around the KSC the grass and the trees. At the press of a button, it writes to `KSP.log` where the
+quads, the holders of their scatter and the objects themselves are drawn against the ground. It also
+checks the pools the holders are taken from and handed back to, and, where a mod has given the scatter
+colliders, compares where each object is drawn with where the physics engine holds its collider.
 
 ## What it measures
 
-At each load of a save, for every quad carrying scatter around the craft, the heights of the quad and of
-each of its holders, centre and matrix, and, on the nearest quad, 10 vertices of every object against the
-ground under them: readings that should come out the same at every load. A sixth reading, during a
-flight or across scene switches, checks the pools the holders are taken from and handed back to. A
-seventh, where a mod has given the scatter colliders, compares where an object is drawn with where the
-physics engine holds its collider. Every record goes to `KSP.log`, one line per quad, holder, vertex and
-collider.
+At each press of *Record the rocks*: the heights of the quads carrying scatter around the craft, of
+their holders, and of the objects of the nearest quad against the ground. Two other readings check the
+holder pools and, where a mod adds them, the scatter colliders.
 
 **→ Full chapter: [What it measures](docs/what-it-measures.md)**
 
