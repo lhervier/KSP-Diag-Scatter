@@ -108,20 +108,68 @@ record how many were measured over the nearest quad. Both read 0 on a stock inst
 built them, which is how the mods that add them proceed. A mod that ordered them another way would give
 gaps of metres, not of millimetres, and the mismatch would be plain.
 
-## What to expect
-
-In stock, none of the heights of readings 1 to 5 stays the same from one load to the next: the quads,
-their holders, the vertices of every object and the ground under them all move. Installing
-[Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix) is not enough to keep them
-equal: the quads' heights then come back the same at every load, but the holders' still do not, and the
-objects still move against the ground. Reading 6, on the other hand, should break no rule. With colliders
-on the scatter, reading 7 gives centimetres either way, on stock and with Terrain Precision Fix alike. See
-[What the readings show](what-the-readings-show.md).
-
 ## Precision
 
 Unity gives centres, matrices and vertices as single precision world coordinates. The world origin stays
 near the craft, so close to it they resolve a fraction of a millimetre, but the step of a `float` is
 0.5 mm at 4 km from that origin and 1 mm at 8 km. Around a landed craft, the nearest quad is not affected;
-the quads further away can be. [Over a flight](measuring-the-rocks.md#over-a-flight) 5 km up, all of them
+the quads further away can be. Over a flight 5 km up, all of them
 are.
+
+## The log
+
+Every record is written on lines starting with `[Diag-Scatter]`, every height in metres, from
+the centre of the body, to the micrometre: subtracting two of them gives millimetres. A record reads:
+
+```
+Record … on …: scatter on. Heights are …
+  quad '…': height …, matrix …, up … mm, across … mm
+    holder '…': built, height …, matrix …, up … mm, across … mm
+    …
+  …
+  rock '…' '…' #0 vertex …: ground …, vertex …, … mm above the ground
+  …
+  rock '…' '…' #0 collider: physics …, drawn …, up … mm, across … mm
+  …
+End of record …: … quads with rocks, … holders (… not built yet); nearest quad '…': … rocks, … vertices measured, … without ground under them, … colliders measured
+```
+
+- An opening line, with the body and whether scatter is on.
+- **Every** quad carrying scatter around the craft, with the height of its centre, the height
+  of its matrix, *up* and *across* in millimetres.
+- Under each quad, each of its holders, one per kind of scatter, ordered by name: whether its objects are
+  built yet, then the same heights, *up* and *across*, still against the centre of the quad.
+- Then, for the nearest quad only, one line per measured vertex, object after object and holder after
+  holder: the quad, the kind of scatter, the object's number, the vertex's number in the model, the
+  height of the ground under the vertex and of the vertex itself, and the gap between the two in
+  millimetres. A vertex without ground under it is one where the ray found no terrain: its ground and its
+  gap read `--`. An object keeps its number from one load to the next, since stock places the scatter
+  from a seed, and a vertex keeps its number since it is chosen on the model.
+- After the vertices of an object, and only if it has a collider, one more line: the height of the centre
+  of its collision box where the physics engine holds it, the height of that same centre where the object
+  is drawn, and the gap between the two, *up* and *across*. A positive *up* puts the collider above the
+  object one sees. Each holder's line ends on how many of its objects carry a collider, and the closing
+  line on how many were measured: all read 0 on a stock install.
+- A closing line, with the counts: it is the one left in sight when following the file as it grows.
+
+A holder's matrix height minus its quad's height and its *up* are nearly the same number, by two
+different routes: a difference of heights, and a projection on the vertical.
+
+## The log of the holder pools
+
+```
+Holder record …: every pool of holders of rocks, one per body and kind of scatter
+  Mun 'Rock00': in use … (counter …): … destroyed, … without a quad, … on an inactive quad, … on a quad of another body; free … (counter …): … destroyed, … outside the pool's container, … still with a quad; … both in use and free
+  holder '…' in no pool, under '…'
+End of holder record …: … pools, … holders in use, … free, … in no pool; … broken rules
+```
+
+- An opening line.
+- One line per pool that holds any holder, by body and kind of scatter: how many holders are in use and
+  free, each next to the pool's own count, then how many break each rule. A pool that holds none is left
+  out.
+- One line per holder that belongs to no pool, with the object it hangs from.
+- A closing line, with the totals and the number of broken rules: the holders counted on the pool lines,
+  one more for each count that disagrees with its list, and the holders in no pool. Expected: 0.
+
+Holder records are numbered on their own, apart from the rock records.
