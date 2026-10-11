@@ -49,7 +49,7 @@ whole object:
   an object sunk into it.
 
 Every object of a kind is a copy of the same model, moved, turned and scaled. The 10 vertices are chosen
-on that model, so they are the same ones in every object of that kind and at every load: the lowest vertex
+on that model, so they are the same ones in every object of that kind and at every reading: the lowest vertex
 of the model first, then, one after the other, the vertex furthest from all those already chosen. A model
 with 10 vertices or fewer has all of them measured. Heights alone would not show an object that turns
 about a point without moving it; spread over the whole object, the vertices show any part of it that
@@ -140,7 +140,7 @@ End of record …: … quads with rocks, … holders (… not built yet); neares
   holder: the quad, the kind of scatter, the object's number, the vertex's number in the model, the
   height of the ground under the vertex and of the vertex itself, and the gap between the two in
   millimetres. A vertex without ground under it is one where the ray found no terrain: its ground and its
-  gap read `--`. An object keeps its number from one load to the next, since stock places the scatter
+  gap read `--`. An object keeps its number from one reading to the next, since stock places the scatter
   from a seed, and a vertex keeps its number since it is chosen on the model.
 - After the vertices of an object, and only if it has a collider, one more line: the height of the centre
   of its collision box where the physics engine holds it, the height of that same centre where the object
