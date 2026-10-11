@@ -3,18 +3,16 @@
 Stock builds the scatter of a terrain quad as one mesh per kind of scatter, each held by an object of its
 own, a *holder* (`PQSMod_LandClassScatterQuad`).
 
-Readings 1 to 5 compare a scene with itself. You load the same save several times, and at each load the
-mod reads the same things at the same place: readings 1 to 4 on every quad carrying scatter around the
-craft, reading 5 on the quad nearest to it. Nothing in the scene changed between two loads, so every one
-of these readings should come out the same every time. Every position is read as a *height*: its distance
-from the centre of the body, in double precision, from the exact position of that centre that KSP keeps
-(`CelestialBody.position`).
+Readings 1 to 5 are taken together, at each press of *Record the rocks*: readings 1 to 4 on every quad
+carrying scatter around the craft, reading 5 on the quad nearest to it. Every position is read as a
+*height*: its distance from the centre of the body, in double precision, from the exact position of that
+centre that KSP keeps (`CelestialBody.position`).
 
 Reading 6 is of another kind: taken in any scene, on a button of its own, it measures no height and checks
 the pools the holders come from, during a flight or across scene switches.
 
-Reading 7 compares nothing between loads. Within one reading, it compares where an object is drawn with
-where the physics engine holds the collider of that same object. It only comes out with a mod that gives
+Reading 7 compares, within one reading, where an object is drawn with where the physics engine holds the
+collider of that same object. It only comes out with a mod that gives
 the scatter colliders, since stock gives it none.
 
 ## 1. The centre of the quad
@@ -57,9 +55,8 @@ with 10 vertices or fewer has all of them measured. Heights alone would not show
 about a point without moving it; spread over the whole object, the vertices show any part of it that
 rises or sinks against the ground.
 
-Stock sinks scatter partly into the ground on purpose, so the gap between a vertex and the ground, which
-the log gives as well, says little on its own. What matters is whether it stays the same from one load to
-the next.
+Stock sinks scatter partly into the ground on purpose: a vertex below the ground, in the gap the log
+gives as well, is not an error on its own.
 
 ## 6. The pools of holders
 

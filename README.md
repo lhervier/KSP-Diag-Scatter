@@ -33,8 +33,7 @@ holder pools and, where a mod adds them, the scatter colliders.
    settled. The last line of the record tells what it holds: quads and their scatter are built over
    several frames after loading, so if holders are not built yet, or the counts still grow from one press
    to the next, wait a few seconds and press again.
-4. **Load the same save again, and press again.** It is the series that is worth reading, not a record:
-   how far things move changes from one load to the next.
+4. **Load the same save again, and press again.** It is the series that is worth reading, not a record.
 
 *Record the holder pools* works in every scene, and each of its records is a check of its own: it ends on
 the number of rules the pools break, 0 expected. Reading 7 needs a mod that gives the scatter colliders,
