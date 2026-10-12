@@ -39,13 +39,28 @@ the number of rules the pools break, 0 expected. Reading 7 needs a mod that give
 and its closing line counts the colliders measured: 0 means there is nothing to read. KSP overwrites
 `KSP.log` each time it starts: copy it before relaunching.
 
+## Driving it by script
+
+With [KSP-MCPServer](https://github.com/lhervier/KSP-MCPServer) installed next to it, this mod offers
+its window to a program, as tools of that server: a script presses its buttons and reads what it shows,
+as a player would. Without the server, this mod runs the same.
+
+| tool | what it does |
+|---|---|
+| `scatter_record_rocks` | presses *Record the rocks*: writes a record of the rocks around the active vessel to `KSP.log`, in flight only, and returns its closing line |
+| `scatter_record_holders` | presses *Record the holder pools*: writes a record of every pool of holders to `KSP.log`, in any scene, and returns its closing line |
+| `scatter_move_window` | moves the window, as dragging it does: `x` and `y` in pixels from the top left corner of the screen; returns its position and size |
+| `scatter_show_window` | shows or hides the window, as `Alt+F6` does; what it reads goes on either way |
+
 ## Get it
 
 Source: <https://github.com/lhervier/KSP-Diag-Scatter>
 
-**Build.** It needs the .NET SDK and reads the KSP assemblies from your install. Set `KSPDIR` to your
-KSP install folder and run `build.bat`. It compiles `GameData/KSPDiagScatter/KSPDiagScatter.dll`
-and never touches your KSP install.
+**Build.** It needs the .NET SDK and [KSP-MCPServer](https://github.com/lhervier/KSP-MCPServer) installed in your KSP,
+and reads the KSP assemblies from your install. Set `KSPDIR` to your KSP install folder and run
+`build.bat`. It compiles `GameData/KSPDiagScatter/KSPDiagScatter.dll` and never touches your KSP
+install. KSP-MCPServer is only needed to compile: it provides the attribute that marks what this mod offers to
+it, and this mod runs the same without it.
 
 **Install.** Copy `GameData/KSPDiagScatter` into the `GameData` of KSP. It runs on a stock
 install, and needs neither Harmony nor any other mod: it only reads the scene.
