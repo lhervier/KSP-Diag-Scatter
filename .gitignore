@@ -1,6 +1,6 @@
 Output/
 obj/
 GameData/KSPDiagScatter/*.dll
-GameData/KSPDiagScatter/*.zip
+GameData/**/*.zip
 CLAUDE.md
 __pycache__/
