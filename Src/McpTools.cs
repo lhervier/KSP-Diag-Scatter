@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
-using com.github.lhervier.ksp.mcpserver;
+using com.github.lhervier.ksp.util.mcpserver;
 
 namespace com.github.lhervier.ksp.diag.scatter
 {
     /// <summary>
-    /// What KSP-MCPServer, when it is installed, offers of this mod as tools: its buttons and the moving of its
+    /// What KSP-Util-MCPServer, when it is installed, offers of this mod as tools: its buttons and the moving of its
     /// window. Each method works on the window loaded in the scene. Nothing here is needed to play by hand, and
-    /// this mod runs the same without KSP-MCPServer: only that server reads the attribute.
+    /// this mod runs the same without KSP-Util-MCPServer: only that server reads the attribute.
     /// </summary>
     internal static class McpTools
     {

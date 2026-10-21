@@ -41,7 +41,7 @@ and its closing line counts the colliders measured: 0 means there is nothing to 
 
 ## Driving it by script
 
-With [KSP-MCPServer](https://github.com/lhervier/KSP-MCPServer) installed next to it, this mod offers
+With [KSP-Util-MCPServer](https://github.com/lhervier/KSP-Util-MCPServer) installed next to it, this mod offers
 its window to a program, as tools of that server: a script presses its buttons and reads what it shows,
 as a player would. Without the server, this mod runs the same.
 
@@ -56,10 +56,10 @@ as a player would. Without the server, this mod runs the same.
 
 Source: <https://github.com/lhervier/KSP-Diag-Scatter>
 
-**Build.** It needs the .NET SDK and [KSP-MCPServer](https://github.com/lhervier/KSP-MCPServer) installed in your KSP,
+**Build.** It needs the .NET SDK and [KSP-Util-MCPServer](https://github.com/lhervier/KSP-Util-MCPServer) installed in your KSP,
 and reads the KSP assemblies from your install. Set `KSPDIR` to your KSP install folder and run
 `build.bat`. It compiles `GameData/KSPDiagScatter/KSPDiagScatter.dll` and never touches your KSP
-install. KSP-MCPServer is only needed to compile: it provides the attribute that marks what this mod offers to
+install. KSP-Util-MCPServer is only needed to compile: it provides the attribute that marks what this mod offers to
 it, and this mod runs the same without it.
 
 **Install.** Copy `GameData/KSPDiagScatter` into the `GameData` of KSP. It runs on a stock
